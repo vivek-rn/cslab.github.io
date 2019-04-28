@@ -1,0 +1,27 @@
+
+  sum of n numbers
+data segment
+a dw 1,2,3,4,5,6,7,8,9,10
+data ends
+code segment
+assume cs:code,ds:data
+start:mov ax,data
+          mov ds,ax
+          mov ds,ax
+          mov cl,10
+          lea bx,a
+          mov cx,00
+l1:add ax,word ptr[bx]
+     add bx,02
+     dec cl,0
+     jn2 l1
+     int 3h
+code ends
+end start
+
+output
+AX=0037
+DS=076A
+SS=0769
+076B:001A
+

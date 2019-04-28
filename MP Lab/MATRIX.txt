@@ -1,0 +1,26 @@
+MATRIX ADDITION
+data segment
+m1 db 01h,02h,03h,04h
+m2 db 01h,02h,03h,04h
+re db 04h dup(0)
+data ends
+code segment
+assume cs:code,ds:data
+start:mov ax,data
+           mov ds,ax
+           mov si,offset m1
+           mov di,offset m2
+           mov bp,offset  re
+            mov cl,04h
+add1:mov al,[si]
+            add al,[di]
+            mov [bp],al
+             inc bp
+             inc si
+             inc di
+             loop add1
+             mov ah,4ch
+             int 21h
+             code ends
+             end start
+

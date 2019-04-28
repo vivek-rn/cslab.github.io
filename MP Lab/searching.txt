@@ -1,0 +1,45 @@
+	   searching
+
+
+data segment
+string 1 db 11h,22h,33h,44h,55h
+msg 1 db “found$”
+msg 2 db “not found$”
+se db 33h
+data ends
+print macro msg
+move  ah,09h
+lea dx,msg
+int 21h
+int 3
+endm
+code segment
+assume cs:code,ds:data
+start:mov ax,data
+	mov ds,ax
+	mov al,se
+	lea si,string1
+	mov cx,04h
+	up:mov bl,[si]
+	       cmp  al,bl
+	        jz fo
+	inc  si
+	dec  cx
+	jnz  up
+	print msg2
+	jmp end1
+fo:print msg1 
+end1:int 3
+        code ends
+        end start
+
+output:found
+ax=0933
+ds=0033
+d 076A:0000
+076A:0000      11   22   33   44   55
+
+
+
+              
+

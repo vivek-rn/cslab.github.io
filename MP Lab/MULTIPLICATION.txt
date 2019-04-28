@@ -1,0 +1,46 @@
+MULTIPLICATION
+Data  segment
+A db 10h
+B db 40h
+C db ?
+Data ends
+Code segment 
+Assume cs:code,ds:data
+Start:  mov ax,data
+            Mov ds,ax
+            Mov ax,a
+            Mov bx,b
+            Mul bx
+            Mov  c,ax
+            Int 3
+            Code ends
+            End start
+
+OUTPUT
+Ax=0400    bx=0040   cx=0022
+
+
+
+
+
+DIVISION
+Data  segment
+A db 0006h
+B db 0003h
+C db ?
+Data ends
+Code segment 
+Assume cs:code,ds:data
+Start:  mov ax,data
+            Mov ds,ax
+            Mov ax,a
+            Mov bx,b
+            div bx
+            Mov  c,ax
+            Int 3
+            Code ends
+            End start
+OUTPUT
+Ax=0002   bx=0040  cx=0022
+
+

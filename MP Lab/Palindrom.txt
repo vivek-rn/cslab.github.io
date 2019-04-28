@@ -1,0 +1,81 @@
+PALINDROME  OR NOT
+
+ 
+
+data segment
+
+str db “Malayalam$”
+
+m1 db “the string is palindrome$”
+
+m2 db “the string is not palindrome$”
+
+data ends
+
+code segment
+
+assume cs:code,ds:data
+
+start:mov ax,data
+
+           mov ds,ax
+
+           mov bx,offset str
+
+           mov bp,bx
+
+l1:inc bp
+
+     cmp[bp],byte ptr  ‘$’
+
+      jnz  l1
+
+ Dec  bpcCheck:mov ah,[bx]
+
+            cmp ah,[bp]
+
+             jJnz   12
+
+             inc   bx
+
+             cmp[bx],byte   ptr  ‘$’
+
+             jnz  check
+
+             mov dx,offset  m2
+
+             mov  ah,09h
+
+             int  21h
+
+             jmp  last
+
+l2:mov  dx,offset  ,m2
+
+    mov ah,09h
+
+    Int  21h
+
+last:mov  ah,4ch
+
+          int  21h
+
+code ends
+
+end start
+
+ 
+
+ 
+
+ 
+
+OUTPUT:
+
+INPUT:
+
+           Malayalam
+
+OUTPUT:
+
+            The string is palindrome 
