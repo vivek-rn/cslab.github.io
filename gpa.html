@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Selected Option Value</title>
+</head>
+<body>
+        
+<table id="table" border="1">
+
+<tr>
+<td align="center">
+<b>SUBJECTS</b>
+</td>
+<td align="center">
+<b>GRADE</b>
+</td>
+<td align="center">
+<b>GRADE_VALUE</b>
+</td>
+<td align="center">
+<b>CREDIT</b>
+</td>
+<td align="center">
+<b>CREDIT * GRADE</b>
+</td>
+</tr>
+
+
+<tr>
+<td align="left">Theory Of Computation (CS301):</td>
+<td align="center">
+<select id="list1" onchange="getSelectValue()">
+<option value="o">O</option> 
+<option value="aplus">A+</option> 
+<option value="a">A</option> 
+<option value="bplus">B+</option> 
+<option value="b">B</option> 
+<option value="c">C</option> 
+<option value="p">P</option> 
+<option value="f">F</option> 
+<option value="fe">FE</option> 
+<option value="i">I</option> 
+</select>
+</td>
+
+<td align="center">
+<label id="output1">test</output>
+</td>
+
+<td align="center">
+<label id="cred1">4</output>
+</td>
+
+<td align="center">
+<label id="output11">test</output>
+</td>
+</tr>
+
+<tr>
+<td align="left">System Software (CS303):</td>
+<td align="center">
+<select id="list2" onchange="getSelectValue()">
+<option value="o">O</option> 
+<option value="aplus">A+</option> 
+<option value="a">A</option> 
+<option value="bplus">B+</option> 
+<option value="b">B</option> 
+<option value="c">C</option> 
+<option value="p">P</option> 
+<option value="f">F</option> 
+<option value="fe">FE</option> 
+<option value="i">I</option> 
+</select>
+</td>
+
+<td align="center">
+<label id="output2">test</output>
+</td>
+
+<td align="center">
+<label id="cred2" >3</output>
+</td>
+
+<td align="center">
+<label id="output22">test</output>
+</td>
+</tr>
+
+<tr>
+<td align="left">Microprocessor (CS305):</td>
+<td align="center">
+<select id="list3" onchange="getSelectValue()">
+<option value="o">O</option> 
+<option value="aplus">A+</option> 
+<option value="a">A</option> 
+<option value="bplus">B+</option> 
+<option value="b">B</option> 
+<option value="c">C</option> 
+<option value="p">P</option> 
+<option value="f">F</option> 
+<option value="fe">FE</option> 
+<option value="i">I</option> 
+</select>
+</td>
+
+<td align="center">
+<label id="output3">test</output>
+</td>
+
+<td align="center">
+<label id="cred3" >3</output>
+</td>
+
+<td align="center">
+<label id="output33">test</output>
+</td>
+</tr>
+
+<tr>
+<td align="left">Data Communication (CS307):</td>
+<td align="center">
+<select id="list4" onchange="getSelectValue()">
+<option value="o">O</option> 
+<option value="aplus">A+</option> 
+<option value="a">A</option> 
+<option value="bplus">B+</option> 
+<option value="b">B</option> 
+<option value="c">C</option> 
+<option value="p">P</option> 
+<option value="f">F</option> 
+<option value="fe">FE</option> 
+<option value="i">I</option> 
+</select>
+</td>
+
+<td align="center">
+<label id="output4">test</output>
+</td>
+
+<td align="center">
+<label id="cred4" >3</output>
+</td>
+
+<td align="center">
+<label id="output44">test</output>
+</td>
+</tr>
+
+<tr>
+<td align="left">Graph Theory (CS309):</td>
+<td align="center">
+<select id="list5" onchange="getSelectValue();">
+<option value="o">O</option> 
+<option value="aplus">A+</option> 
+<option value="a">A</option> 
+<option value="bplus">B+</option> 
+<option value="b">B</option> 
+<option value="c">C</option> 
+<option value="p">P</option> 
+<option value="f">F</option> 
+<option value="fe">FE</option> 
+<option value="i">I</option> 
+</select>
+</td>
+
+<td align="center">
+<label id="output5">test</output>
+</td>
+
+<td align="center">
+<label id="cred5" >3</output>
+</td>
+
+<td align="center">
+<label id="output55">test</output>
+</td>
+</tr>
+
+<tr>
+<td align="left">Soft Computing (CS361):</td>
+<td align="center">
+<select id="list6" onchange="getSelectValue();">
+<option value="o">O</option> 
+<option value="aplus">A+</option> 
+<option value="a">A</option> 
+<option value="bplus">B+</option> 
+<option value="b">B</option> 
+<option value="c">C</option> 
+<option value="p">P</option> 
+<option value="f">F</option> 
+<option value="fe">FE</option> 
+<option value="i">I</option> 
+</select>
+</td>
+
+<td align="center">
+<label id="output6">test</output>
+</td>
+
+<td align="center">
+<label id="cred6" >3</output>
+</td>
+
+<td align="center">
+<label id="output66">test</output>
+</td>
+</tr>
+
+
+<tr>
+<td align="left">Design project (CS341):</td>
+<td align="center">
+<select id="list7" onchange="getSelectValue();">
+<option value="o">O</option> 
+<option value="aplus">A+</option> 
+<option value="a">A</option> 
+<option value="bplus">B+</option> 
+<option value="b">B</option> 
+<option value="c">C</option> 
+<option value="p">P</option> 
+<option value="f">F</option> 
+<option value="fe">FE</option> 
+<option value="i">I</option> 
+</select>
+</td>
+
+<td align="center">
+<label id="output7">test</output>
+</td>
+
+<td align="center">
+<label id="cred7" >2</output>
+</td>
+
+<td align="center">
+<label id="output77">test</output>
+</td>
+</tr>
+
+<tr>
+<td align="left">SS Lab (CS331):</td>
+<td align="center">
+<select id="list8" onchange="getSelectValue();">
+<option value="o">O</option> 
+<option value="aplus">A+</option> 
+<option value="a">A</option> 
+<option value="bplus">B+</option> 
+<option value="b">B</option> 
+<option value="c">C</option> 
+<option value="p">P</option> 
+<option value="f">F</option> 
+<option value="fe">FE</option> 
+<option value="i">I</option> 
+</select>
+</td>
+
+<td align="center">
+<label id="output8">test</output>
+</td>
+
+<td align="center">
+<label id="cred8" >1</output>
+</td>
+
+<td align="center">
+<label id="output88">test</output>
+</td>
+</tr>
+
+<tr>
+<td align="left">ASD Lab (CS333):</td>
+<td align="center">
+<select id="list9" onchange="getSelectValue();">
+<option value="o">O</option> 
+<option value="aplus">A+</option> 
+<option value="a">A</option> 
+<option value="bplus">B+</option> 
+<option value="b">B</option> 
+<option value="c">C</option> 
+<option value="p">P</option> 
+<option value="f">F</option> 
+<option value="fe">FE</option> 
+<option value="i">I</option> 
+</select>
+</td>
+
+<td align="center">
+<label id="output9">test</output>
+</td>
+
+<td align="center">
+<label id="cred9" >1</output>
+</td>
+
+<td align="center">
+<label id="output99">test</output>
+</td>
+</tr>
+
+<tr colspan="2">
+<td><b>TOTAL:</b></td>
+<td></td>
+<td></td>
+<td align="center"><b><label id="val"></label></b></td>  
+<td align="center"><b><label id="sumcredit"></label></b></td>
+</tr>
+
+<tr><td align="center" colspan="5"><b><font size="50">TOTAL SGPA : <label style="color:green;"id="total"></label></font></b></td></tr>
+<tr><td align="center" colspan="5"><button  style="background-color:green; border:none; color:white; text-align:center;width:auto;" type="button" onclick="add()">Calculate</button></tr>
+
+
+
+<script>
+
+function getSelectValue()
+{
+    var toc = document.getElementById("list1").value;
+    var ss = document.getElementById("list2").value;
+    var mp = document.getElementById("list3").value;
+    var dc = document.getElementById("list4").value;
+    var gtc = document.getElementById("list5").value;
+    var sc = document.getElementById("list6").value;
+    var dp = document.getElementById("list7").value;
+    var sslab = document.getElementById("list8").value;
+    var asdlab = document.getElementById("list9").value;
+
+    if (toc == "o")
+    {
+	val=10;   
+        document.getElementById("output1").innerHTML=val;
+        document.getElementById("output11").innerHTML=val*4; 
+    }
+    if (toc == "aplus")
+    {
+	val=9;
+        document.getElementById("output1").innerHTML=val;
+        document.getElementById("output11").innerHTML=val*4;
+    }
+    if (toc == "a")
+    {
+	val=8.5;
+        document.getElementById("output1").innerHTML=val;
+        document.getElementById("output11").innerHTML=val*4;
+    }
+    if (toc == "bplus")
+    {
+	val=8;
+        document.getElementById("output1").innerHTML=val;
+        document.getElementById("output11").innerHTML=val*4;
+    }
+    if (toc == "b")
+    {
+	val=7;
+        document.getElementById("output1").innerHTML=val;
+        document.getElementById("output11").innerHTML=val*4;
+    }
+    if (toc == "c")
+    {
+	val=6;
+        document.getElementById("output1").innerHTML=val;
+        document.getElementById("output11").innerHTML=val*4;
+    }
+    if (toc == "p")
+    {
+	val=5;
+        document.getElementById("output1").innerHTML=val;
+        document.getElementById("output11").innerHTML=val*4;
+    }
+    if (toc == "f")
+    {
+	val=0;
+        document.getElementById("output1").innerHTML=val;
+        document.getElementById("output11").innerHTML=val*4;
+    }
+    if (toc == "fe")
+    {
+	val=0;
+        document.getElementById("output1").innerHTML=val;
+        document.getElementById("output11").innerHTML=val*4;
+    }
+    if (toc == "i")
+    {
+	val=0;
+        document.getElementById("output1").innerHTML=val;
+        document.getElementById("output11").innerHTML=val*4;
+    }
+
+    if (ss == "o")
+    {
+	val=10;
+        document.getElementById("output2").innerHTML=val;
+        document.getElementById("output22").innerHTML=val*3;
+    }
+    if (ss == "aplus")
+    {
+	val=9;
+        document.getElementById("output2").innerHTML=val;
+        document.getElementById("output22").innerHTML=val*3;
+    }
+    if (ss == "a")
+    {
+	val=8.5;
+        document.getElementById("output2").innerHTML=val;
+        document.getElementById("output22").innerHTML=val*3;
+    }
+    if (ss == "bplus")
+    {
+	val=8;
+        document.getElementById("output2").innerHTML=val;
+        document.getElementById("output22").innerHTML=val*3;
+    }
+    if (ss == "b")
+    {
+	val=7;
+        document.getElementById("output2").innerHTML=val;
+        document.getElementById("output22").innerHTML=val*3;
+    }
+    if (ss == "c")
+    {
+	val=6;
+        document.getElementById("output2").innerHTML=val;
+        document.getElementById("output22").innerHTML=val*3;
+    }
+    if (ss == "p")
+    {
+	val=5;
+        document.getElementById("output2").innerHTML=val;
+        document.getElementById("output22").innerHTML=val*3;
+    }
+    if (ss == "f")
+    {
+	val=0;
+        document.getElementById("output2").innerHTML=val;
+        document.getElementById("output22").innerHTML=val*3;
+    }
+    if (ss == "fe")
+    {
+	val=0;
+        document.getElementById("output2").innerHTML=val;
+        document.getElementById("output22").innerHTML=val*3;
+    }
+    if (ss == "i")
+    {
+	val=0;
+        document.getElementById("output2").innerHTML=val;
+        document.getElementById("output22").innerHTML=val*3;
+    }
+
+    if (mp == "o")
+    {
+	val=10;
+        document.getElementById("output3").innerHTML=val;
+        document.getElementById("output33").innerHTML=val*3;
+    }
+    if (mp == "aplus")
+    {
+	val=9;
+        document.getElementById("output3").innerHTML=val;
+        document.getElementById("output33").innerHTML=val*3;
+    }
+    if (mp == "a")
+    {
+	val=8.5;
+        document.getElementById("output3").innerHTML=val;
+        document.getElementById("output33").innerHTML=val*3;
+    }
+    if (mp == "bplus")
+    {
+	val=8;
+        document.getElementById("output3").innerHTML=val;
+        document.getElementById("output33").innerHTML=val*3;
+    }
+    if (mp == "b")
+    {
+	val=7;
+        document.getElementById("output3").innerHTML=val;
+        document.getElementById("output33").innerHTML=val*3;
+    }
+    if (mp == "c")
+    {
+	val=6;
+        document.getElementById("output3").innerHTML=val;
+        document.getElementById("output33").innerHTML=val*3;
+    }
+    if (mp == "p")
+    {
+	val=5;
+        document.getElementById("output3").innerHTML=val;
+        document.getElementById("output33").innerHTML=val*3;
+    }
+    if (mp == "f")
+    {
+	val=0;
+        document.getElementById("output3").innerHTML=val;
+        document.getElementById("output33").innerHTML=val*3;
+    }
+    if (mp == "fe")
+    {
+	val=0;
+        document.getElementById("output3").innerHTML=val;
+        document.getElementById("output33").innerHTML=val*3;
+    }
+    if (mp == "i")
+    {
+	val=0;
+        document.getElementById("output3").innerHTML=val;
+        document.getElementById("output33").innerHTML=val*3;
+    }
+
+
+
+    if (dc == "o")
+    {
+	val=10;
+        document.getElementById("output4").innerHTML=val;
+        document.getElementById("output44").innerHTML=val*3;
+    }
+    if (dc == "aplus")
+    {
+	val=9;
+        document.getElementById("output4").innerHTML=val;
+        document.getElementById("output44").innerHTML=val*3;
+    }
+    if (dc == "a")
+    {
+	val=8.5;
+        document.getElementById("output4").innerHTML=val;
+        document.getElementById("output44").innerHTML=val*3;
+
+    }
+    if (dc == "bplus")
+    {
+	val=8;
+        document.getElementById("output4").innerHTML=val;
+        document.getElementById("output44").innerHTML=val*3;
+    }
+    if (dc == "b")
+    {
+	val=7;
+        document.getElementById("output4").innerHTML=val;
+        document.getElementById("output44").innerHTML=val*3;
+    }
+    if (dc == "c")
+    {
+	val=6;
+        document.getElementById("output4").innerHTML=val;
+        document.getElementById("output44").innerHTML=val*3;
+    }
+    if (dc == "p")
+    {
+	val=5;
+        document.getElementById("output4").innerHTML=val;
+        document.getElementById("output44").innerHTML=val*3;
+    }
+    if (dc == "f")
+    {
+	val=0;
+        document.getElementById("output4").innerHTML=val;
+        document.getElementById("output44").innerHTML=val*3;
+    }
+    if (dc == "fe")
+    {
+	val=0;
+        document.getElementById("output4").innerHTML=val;
+        document.getElementById("output44").innerHTML=val*3;
+    }
+    if (dc == "i")
+    {
+	val=0;
+        document.getElementById("output4").innerHTML=val;
+        document.getElementById("output44").innerHTML=val*3;
+    }
+
+    if (gtc == "o")
+    {
+	val=10;
+        document.getElementById("output5").innerHTML=val;
+        document.getElementById("output55").innerHTML=val*3;
+    }
+    if (gtc == "aplus")
+    {
+	val=9;
+        document.getElementById("output5").innerHTML=val;
+        document.getElementById("output55").innerHTML=val*3;
+    }
+    if (gtc == "a")
+    {
+	val=8.5;
+        document.getElementById("output5").innerHTML=val;
+        document.getElementById("output55").innerHTML=val*3;
+    }
+    if (gtc == "bplus")
+    {
+	val=8;
+        document.getElementById("output5").innerHTML=val;
+        document.getElementById("output55").innerHTML=val*3;
+    }
+    if (gtc == "b")
+    {
+	val=7;
+        document.getElementById("output5").innerHTML=val;
+        document.getElementById("output55").innerHTML=val*3;
+    }
+    if (gtc == "c")
+    {
+	val=6;
+        document.getElementById("output5").innerHTML=val;
+        document.getElementById("output55").innerHTML=val*3;
+    }
+    if (gtc == "p")
+    {
+	val=5;
+        document.getElementById("output5").innerHTML=val;
+        document.getElementById("output55").innerHTML=val*3;
+    }
+    if (gtc == "f")
+    {
+	val=0;
+        document.getElementById("output5").innerHTML=val;
+        document.getElementById("output55").innerHTML=val*3;
+    }
+    if (gtc == "fe")
+    {
+	val=0;
+        document.getElementById("output5").innerHTML=val;
+        document.getElementById("output55").innerHTML=val*3;
+    }
+    if (gtc == "i")
+    {
+	val=0;
+        document.getElementById("output5").innerHTML=val;
+        document.getElementById("output55").innerHTML=val*3;
+    }
+
+
+    if (sc == "o")
+    {
+	val=10;
+        document.getElementById("output6").innerHTML=val;
+        document.getElementById("output66").innerHTML=val*3;
+    }
+    if (sc == "aplus")
+    {
+	val=9;
+        document.getElementById("output6").innerHTML=val;
+        document.getElementById("output66").innerHTML=val*3;
+    }
+    if (sc == "a")
+    {
+	val=8.5;
+        document.getElementById("output6").innerHTML=val;
+        document.getElementById("output66").innerHTML=val*3;
+    }
+    if (sc == "bplus")
+    {
+	val=8;
+        document.getElementById("output6").innerHTML=val;
+        document.getElementById("output66").innerHTML=val*3;
+    }
+    if (sc == "b")
+    {
+	val=7;
+        document.getElementById("output6").innerHTML=val;
+        document.getElementById("output66").innerHTML=val*3;
+    }
+    if (sc == "c")
+    {
+	val=6;
+        document.getElementById("output6").innerHTML=val;
+        document.getElementById("output66").innerHTML=val*3;
+    }
+    if (sc == "p")
+    {
+	val=5;
+        document.getElementById("output6").innerHTML=val;
+        document.getElementById("output66").innerHTML=val*3;
+    }
+    if (sc == "f")
+    {
+	val=0;
+        document.getElementById("output6").innerHTML=val;
+        document.getElementById("output66").innerHTML=val*3;
+    }
+    if (sc == "fe")
+    {
+	val=0;
+        document.getElementById("output6").innerHTML=val;
+        document.getElementById("output66").innerHTML=val*3;
+    }
+    if (sc == "i")
+    {
+	val=0;
+        document.getElementById("output6").innerHTML=val;
+        document.getElementById("output66").innerHTML=val*3;
+    }
+
+
+    if (dp == "o")
+    {
+	val=10;
+        document.getElementById("output7").innerHTML=val;
+        document.getElementById("output77").innerHTML=val*2;
+    }
+    if (dp == "aplus")
+    {
+	val=9;
+        document.getElementById("output7").innerHTML=val;
+        document.getElementById("output77").innerHTML=val*2;
+    }
+    if (dp == "a")
+    {
+	val=8.5;
+        document.getElementById("output7").innerHTML=val;
+        document.getElementById("output77").innerHTML=val*2;
+    }
+    if (dp == "bplus")
+    {
+	val=8;
+        document.getElementById("output7").innerHTML=val;
+        document.getElementById("output77").innerHTML=val*2;
+    }
+    if (dp == "b")
+    {
+	val=7;
+        document.getElementById("output7").innerHTML=val;
+        document.getElementById("output77").innerHTML=val*2;
+    }
+    if (dp == "c")
+    {
+	val=6;
+        document.getElementById("output7").innerHTML=val;
+        document.getElementById("output77").innerHTML=val*2;
+    }
+    if (dp == "p")
+    {
+	val=5;
+        document.getElementById("output7").innerHTML=val;
+        document.getElementById("output77").innerHTML=val*2;
+    }
+    if (dp == "f")
+    {
+	val=0;
+        document.getElementById("output7").innerHTML=val;
+        document.getElementById("output77").innerHTML=val*2;
+    }
+    if (dp == "fe")
+    {
+	val=0;
+        document.getElementById("output7").innerHTML=val;
+        document.getElementById("output77").innerHTML=val*2;
+    }
+    if (dp == "i")
+    {
+	val=0;
+        document.getElementById("output7").innerHTML=val;
+        document.getElementById("output77").innerHTML=val*2;
+    }
+
+    if (sslab == "o")
+    {
+	val=10;
+        document.getElementById("output8").innerHTML=val;
+        document.getElementById("output88").innerHTML=val*1;
+    }
+    if (sslab == "aplus")
+    {
+	val=9;
+        document.getElementById("output8").innerHTML=val;
+        document.getElementById("output88").innerHTML=val*1;
+    }
+    if (sslab == "a")
+    {
+	val=8.5;
+        document.getElementById("output8").innerHTML=val;
+        document.getElementById("output88").innerHTML=val*1;
+    }
+    if (sslab == "bplus")
+    {
+	val=8;
+        document.getElementById("output8").innerHTML=val;
+        document.getElementById("output88").innerHTML=val*1;
+    }
+    if (sslab == "b")
+    {
+	val=7;
+        document.getElementById("output8").innerHTML=val;
+        document.getElementById("output88").innerHTML=val*1;
+    }
+    if (sslab == "c")
+    {
+	val=6;
+        document.getElementById("output8").innerHTML=val;
+        document.getElementById("output88").innerHTML=val*1;
+    }
+    if (sslab == "p")
+    {
+	val=5;
+        document.getElementById("output8").innerHTML=val;
+        document.getElementById("output88").innerHTML=val*1;
+    }
+    if (sslab == "f")
+    {
+	val=0;
+        document.getElementById("output8").innerHTML=val;
+        document.getElementById("output88").innerHTML=val*1;
+    }
+    if (sslab == "fe")
+    {
+	val=0;
+        document.getElementById("output8").innerHTML=val;
+        document.getElementById("output88").innerHTML=val*1;
+    }
+    if (sslab == "i")
+    {
+	val=0;
+        document.getElementById("output8").innerHTML=val;
+        document.getElementById("output88").innerHTML=val*1;
+    }
+
+
+    if (asdlab == "o")
+    {
+	val=10;
+        document.getElementById("output9").innerHTML=val;
+        document.getElementById("output99").innerHTML=val*1;
+    }
+    if (asdlab == "aplus")
+    {
+	val=9;
+        document.getElementById("output9").innerHTML=val;
+        document.getElementById("output99").innerHTML=val*1;
+    }
+    if (asdlab == "a")
+    {
+	val=8.5;
+        document.getElementById("output9").innerHTML=val;
+        document.getElementById("output99").innerHTML=val*1;
+    }
+    if (asdlab == "bplus")
+    {
+	val=8;
+        document.getElementById("output9").innerHTML=val;
+        document.getElementById("output99").innerHTML=val*1;
+    }
+    if (asdlab == "b")
+    {
+	val=7;
+        document.getElementById("output9").innerHTML=val;
+        document.getElementById("output99").innerHTML=val*1;
+    }
+    if (asdlab == "c")
+    {
+	val=6;
+        document.getElementById("output9").innerHTML=val;
+        document.getElementById("output99").innerHTML=val*1;
+    }
+    if (asdlab == "p")
+    {
+	val=5;
+        document.getElementById("output9").innerHTML=val;
+        document.getElementById("output99").innerHTML=val*1;
+    }
+    if (asdlab == "f")
+    {
+	val=0;
+        document.getElementById("output9").innerHTML=val;
+        document.getElementById("output99").innerHTML=val*1;
+    }
+    if (asdlab == "fe")
+    {
+	val=0;
+        document.getElementById("output9").innerHTML=val;
+        document.getElementById("output99").innerHTML=val*1;
+    }
+    if (asdlab == "i")
+    {
+	val=0;
+        document.getElementById("output9").innerHTML=val;
+        document.getElementById("output99").innerHTML=val*1;
+    }
+}
+
+getSelectValue();
+
+function add() 
+{
+            var sumcredgrade = 0;
+            var sumCredit = 0;
+            var sumTotal = 0;
+            
+            var cred1 = parseInt(document.getElementById("cred1").innerHTML);
+            var cred2 = parseInt(document.getElementById("cred2").innerHTML);
+            var cred3 = parseInt(document.getElementById("cred3").innerHTML);
+            var cred4 = parseInt(document.getElementById("cred4").innerHTML);
+            var cred5 = parseInt(document.getElementById("cred5").innerHTML);
+            var cred6 = parseInt(document.getElementById("cred6").innerHTML);
+            var cred7 = parseInt(document.getElementById("cred7").innerHTML);
+            var cred8 = parseInt(document.getElementById("cred8").innerHTML);
+            var cred9 = parseInt(document.getElementById("cred9").innerHTML);
+
+
+            sumCredit = cred1+cred2+cred3+cred4+cred5+cred6+cred7+cred8+cred9;
+            document.getElementById("val").innerHTML=sumCredit;
+
+            var cred11 = parseInt(document.getElementById("output11").innerHTML);
+            var cred21 = parseInt(document.getElementById("output22").innerHTML);
+            var cred31 = parseInt(document.getElementById("output33").innerHTML);
+            var cred41 = parseInt(document.getElementById("output44").innerHTML);
+            var cred51 = parseInt(document.getElementById("output55").innerHTML);
+            var cred61 = parseInt(document.getElementById("output66").innerHTML);
+            var cred71 = parseInt(document.getElementById("output77").innerHTML);
+            var cred81 = parseInt(document.getElementById("output88").innerHTML);
+            var cred91 = parseInt(document.getElementById("output99").innerHTML);
+
+            sumcredgrade = cred11+cred21+cred31+cred41+cred51+cred61+cred71+cred81+cred91;
+            document.getElementById("sumcredit").innerHTML=sumcredgrade;
+
+            sumTotal=sumcredgrade/sumCredit;
+            document.getElementById("total").innerHTML = sumcredgrade+'/'+sumCredit+'='+sumTotal;
+
+
+}
+
+
+
+</script>
+</body>
+</html>
