@@ -305,7 +305,8 @@
 <td align="center"><b><label id="sumcredit"></label></b></td>
 </tr>
 
-<tr><td align="center" colspan="5"><b><font size="50">TOTAL SGPA : <label style="color:green;"id="total"></label></font></b></td></tr>
+<tr><td align="center" colspan="5"><b><font size="50">TOTAL SGPA : <label style="color:green;"id="total"></label></font></b> <label style="color:green;"id="total1"></label>  </td></tr>
+	
 <tr><td align="center" colspan="5"><button  style="background-color:green; border:none; color:white; text-align:center;width:auto;" type="button" onclick="add()">Calculate</button></tr>
 
 
@@ -919,7 +920,7 @@ function add()
             sumTotal=sumcredgrade/sumCredit;
 	<% sumTotalp=sumcredgrade/sumCredit %>
             document.getElementById("total").innerHTML = sumcredgrade+'/'+sumCredit +'='+sumTotal;
-	document.getElementById("total").innerHTML = sumTotalp;
+	document.getElementById("total1").innerHTML = sumTotalp;
 
 
 }
