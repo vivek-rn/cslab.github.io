@@ -2,6 +2,38 @@
 <html>
 <head>
 <title>Selected Option Value</title>
+
+<style>
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 25px 80px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 60px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: #b3b300; 
+  color: grey; 
+  border: 2px solid #4CAF50;
+}
+
+.button1:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+
+
+</style>
+
+
 </head>
 <body>
         
@@ -307,7 +339,7 @@
 
 <tr><td align="center" colspan="5"><b><font size="50">TOTAL SGPA : <label style="color:green;"id="total"></label></font></b> <label style="color:green;"id="total1"></label>  </td></tr>
 	
-<tr><td align="center" colspan="5"><button  style="background-color:green; border:none; color:white; text-align:center;width:auto;" type="button" onclick="add()">Calculate</button></tr>
+<tr><td align="center" colspan="5"><button class="button button1" type="button" onclick="add()">Calculate</button></tr>
 
 
 
