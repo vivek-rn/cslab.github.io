@@ -8,16 +8,12 @@ https://github.com/virn1101/thakshak.github.io/tree/master/img/
 <body>
 
 <script>
-
 $.ajax({
-  url: "https://github.com/virn1101/thakshak.github.io/tree/master/img/",
+  url: "http://yoursite.com/images/",
   success: function(data){
-     $(data).find("a:contains(.jpg)").each(function(){
+     $(data).find("td > a").each(function(){
         // will loop through 
-        var images = $(this).attr("href");
-
-        $('<p></p>').html(images).appendTo('a div of your choice')
-
+        alert("Found a file: " + $(this).attr("href"));
      });
   }
 });
