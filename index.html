@@ -1,0 +1,28 @@
+https://drive.google.com/drive/folders/1_bB_iRRghyiJq6Ap0-wAnMi2CZI7CHgK
+
+<html>
+<head>
+<title> Sample Webpage </title>
+</head>
+
+<body>
+
+<script>
+
+$.ajax({
+  url: "https://drive.google.com/drive/folders/1_bB_iRRghyiJq6Ap0-wAnMi2CZI7CHgK",
+  success: function(data){
+     $(data).find("a:contains(.jpg)").each(function(){
+        // will loop through 
+        var images = $(this).attr("href");
+
+        $('<p></p>').html(images).appendTo('a div of your choice')
+
+     });
+  }
+});
+</script>
+
+
+</body>
+</html>
